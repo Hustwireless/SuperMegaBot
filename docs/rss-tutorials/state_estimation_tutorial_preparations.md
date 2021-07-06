@@ -2,6 +2,7 @@
 layout: default
 title: State Estimation Tutorial
 parent: Summer School Tutorials
+nav_order: 1
 ---
 
 # Preparations for State Estimation Tutorial
@@ -9,22 +10,28 @@ For the tutorial you need the following packages:
  - [ethzasl_msf](https://github.com/ethz-asl/ethzasl_msf)
  - [compslam](https://bitbucket.org/leggedrobotics/compslam_rss/src/master/)
 
-You can test it on your own computer by running it with a rosbag provided [bellow](#Download files).
+You can test it on your own computer by running it with a rosbag provided [below](#download-files).
 
 ## Installation
 Download the repositories in the same directory where ```smb_common``` is and build them:
 
 ```bash
 cd ~/catkin_ws/src/
+# ethzasl_msf clone and build
 git clone https://github.com/ethz-asl/ethzasl_msf.git
 git clone https://github.com/ethz-asl/glog_catkin.git
 git clone https://github.com/catkin/catkin_simple.git
-catkin build loam
 catkin build ethzasl_msf
+# smb_msf clone and build
+git clone https://github.com/ETHZ-RobotX/smb_common.git
 catkin build smb_msf
-source ~/catkin_ws/devel/setup.bashrc
+# compslam clone and build
+git clone https://bitbucket.org/leggedrobotics/compslam_rss.git
+catkin build loam
+
+source ~/catkin_ws/devel/setup.bash
 ```
-If there is some issues when building the packages, see trouble shooting [below](#Trouble shooting).
+If there is some issues when building the packages, see trouble shooting [below](#trouble-shooting).
 
 ## Running on your own PC with rosbag
 
@@ -39,6 +46,7 @@ $ roslaunch smb_msf smb_msf.launch
 $ mkdir -p ~/catkin_ws/src/smb_common/smb_msf/rviz
 # Download the rviz file linked below and put it here to make life easier
 $ cd ~/catkin_ws/src/smb_common/smb_msf/rviz
+# Select file->open config->choose the rviz config that you've dowloaded
 $ rviz
 
 # In Terminal 4
@@ -67,12 +75,11 @@ $ roslaunch rviz
 
 ## Download files
 In order to follow the tutorial you will need the following rosbag and rviz file:
-  - [First mission rosbag filtered](https://drive.google.com/file/d/19WjL00NeCvQNPJggVUAQXgWmGNlgPgVX/view?usp=sharing)
-  - [Rviz file](https://drive.google.com/drive/folders/1SvpEzsq67P0i6gEAY6Q_5qGgTa0NeC3r)
+  - [First mission rosbag filtered](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/StateEstimationTutorial/First_mission_wangen_FILTERED.bag)
+  - [Rviz file](http://robotics.ethz.ch/~asl-datasets/2021_RSS_datasets/StateEstimationTutorial/smb.rviz)
 
-Download this rosbags into the folder ```~/catkin_ws/src/smb_common/smb_msf/data```
-
-Download this rviz profile into the folder ```~/catkin_ws/src/smb_common/smb_msf/rviz```
+Download the rosbag into the folder ```~/catkin_ws/src/smb_common/smb_msf/data```
+Download the rviz profile into the folder ```~/catkin_ws/src/smb_common/smb_msf/rviz```
 
 ## Trouble shooting
 

@@ -3,21 +3,17 @@ layout: default
 title: Summer School Tutorials
 nav_order: 4
 has_children: true
-nav_exclude: true
 ---
 
-# Preparations for Tutorials of Robotic Summer School
-{:.no_toc}
-This page provides the relevant information to prepare for the tutorials of the Robotic Summer School.
+# Slides from the Tutorials of the Robotics Summer School
 
-* Table of contents
-{:toc}
+- [Robot Introduction](https://drive.google.com/file/d/1M0saKnG6akhlG7DR4GFbMSjkPg0pcYBZ/view?usp=sharing)
+- [Trajectory Optimization](https://drive.google.com/file/d/1QRv2k9SKuOpqC8V6FnLyDQfcPofo-jpY/view?usp=sharing)
+- [SLAM](https://docs.google.com/presentation/d/11D1X3MY6VR8wBW-JjmiB09uwNbryShT9Ahid3iY3HFk/edit#slide=id.g5b5781704c_0_260)
 
-## Path Planning Tutorial
-The necessary steps to prepare for the path planning tutorial are described [on this page](path_planning_tutorial_preparations.md). 
+# Preparations for Tutorials of Robotics Summer School
 
-## Mapping Tutorial
-Please follow the steps provided in the [installation documentation](mapping_tutorial_preparations.md) of the mapping tutorial. 
+Please follow the instructions given in the following sub-pages to prepare for the respective tutorial.
 
-## Artefact detection Tutorial
-Please follow the install instruction steps provided in the [artefact mapping repository](https://github.com/ethz-asl/artefact_mapping).
+
+
